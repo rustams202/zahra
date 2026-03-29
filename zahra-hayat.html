@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zahra Hayat — Anthropologist & Lawyer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ubc-navy: #002145;
+    --ubc-blue: #0055B7;
+    --ubc-light-blue: #40B4E5;
+    --ubc-gold: #C9A227;
+    --ubc-warm-grey: #F2EFE9;
+    --ubc-slate: #4A5568;
+    --ubc-paper: #FAF8F5;
+    --text: #1a1a2e;
+    --accent: #C9A227;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background: var(--ubc-paper);
+    color: var(--text);
+    overflow-x: hidden;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--ubc-navy);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    height: 64px;
+    border-bottom: 3px solid var(--ubc-gold);
+  }
+
+  .nav-logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: #A0AEC0;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .nav-logo span {
+    color: var(--ubc-gold);
+    font-weight: 700;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #A0AEC0;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--ubc-gold); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    background: var(--ubc-navy);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,162,39,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--ubc-gold), var(--ubc-light-blue), var(--ubc-gold));
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 64px 80px 64px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ubc-gold);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--ubc-gold);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(48px, 6vw, 76px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+
+  .hero-title-italic {
+    font-style: italic;
+    color: var(--ubc-gold);
+  }
+
+  .hero-subtitle {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #94A3B8;
+    margin: 20px 0 40px;
+    max-width: 480px;
+    line-height: 1.5;
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 48px;
+  }
+
+  .tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 6px 14px;
+    border: 1px solid rgba(201,162,39,0.4);
+    color: var(--ubc-gold);
+    border-radius: 2px;
+  }
+
+  .hero-affiliations {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: #64748B;
+    line-height: 2.0;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-affiliations .aff-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #94A3B8;
+  }
+
+  .hero-affiliations .aff-item::before {
+    content: '→';
+    color: var(--ubc-gold);
+    font-size: 12px;
+  }
+
+  .hero-img-col {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-img-frame {
+    position: absolute;
+    top: 80px; right: 48px;
+    width: 340px; height: 420px;
+    border: 1px solid rgba(201,162,39,0.3);
+    border-radius: 4px;
+  }
+
+  .hero-img-frame::before {
+    content: '';
+    position: absolute;
+    top: -8px; left: -8px;
+    width: 100%; height: 100%;
+    border: 1px solid rgba(201,162,39,0.15);
+    border-radius: 4px;
+  }
+
+  .hero-img-frame img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 3px;
+    filter: grayscale(10%);
+  }
+
+  .on-leave-badge {
+    position: absolute;
+    top: 64px; right: 32px;
+    background: rgba(201,162,39,0.15);
+    border: 1px solid var(--ubc-gold);
+    color: var(--ubc-gold);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 2px;
+    z-index: 10;
+  }
+
+  /* ─── SECTION SHARED ─── */
+  section {
+    padding: 100px 0;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  .section-number {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--ubc-gold);
+    letter-spacing: 0.15em;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--ubc-navy);
+  }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--ubc-navy), transparent);
+    opacity: 0.15;
+  }
+
+  /* ─── ABOUT ─── */
+  .about-section {
+    background: #fff;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 24px;
+  }
+
+  .about-text p:first-child::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--ubc-navy);
+    float: left;
+    line-height: 0.75;
+    margin-right: 8px;
+    margin-top: 12px;
+  }
+
+  .about-sidebar {
+    position: sticky;
+    top: 96px;
+  }
+
+  .contact-card {
+    background: var(--ubc-navy);
+    color: white;
+    padding: 36px;
+    border-radius: 4px;
+    border-left: 4px solid var(--ubc-gold);
+  }
+
+  .contact-card h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ubc-gold);
+    margin-bottom: 24px;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .contact-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .contact-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #64748B;
+    margin-bottom: 4px;
+  }
+
+  .contact-value {
+    font-size: 15px;
+    color: #CBD5E1;
+  }
+
+  .contact-value a {
+    color: var(--ubc-light-blue);
+    text-decoration: none;
+  }
+
+  /* ─── RESEARCH ─── */
+  .research-section {
+    background: var(--ubc-warm-grey);
+  }
+
+  .book-feature {
+    background: var(--ubc-navy);
+    border-radius: 4px;
+    padding: 56px 60px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .book-feature::before {
+    content: '"';
+    position: absolute;
+    top: -40px; right: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 320px;
+    color: rgba(201,162,39,0.05);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .book-spine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a3a5c, #0a2240);
+    border-radius: 4px;
+    padding: 40px 24px;
+    min-height: 260px;
+    border-left: 6px solid var(--ubc-gold);
+    box-shadow: 8px 8px 32px rgba(0,0,0,0.4);
+    position: relative;
+  }
+
+  .book-spine-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #fff;
+    text-align: center;
+    line-height: 1.4;
+    writing-mode: horizontal-tb;
+  }
+
+  .book-spine-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ubc-gold);
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .book-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+
+  .book-content p {
+    color: #94A3B8;
+    font-size: 17px;
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  .prize-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,162,39,0.15);
+    border: 1px solid rgba(201,162,39,0.4);
+    color: var(--ubc-gold);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    padding: 8px 16px;
+    border-radius: 2px;
+    margin-top: 8px;
+  }
+
+  .research-areas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .research-card {
+    background: #fff;
+    padding: 32px 28px;
+    border-radius: 4px;
+    border-top: 3px solid var(--ubc-navy);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .research-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,33,69,0.1);
+  }
+
+  .research-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--ubc-navy);
+    margin-bottom: 12px;
+  }
+
+  .research-card p {
+    font-size: 16px;
+    color: var(--ubc-slate);
+    line-height: 1.7;
+  }
+
+  /* ─── AWARDS ─── */
+  .awards-section {
+    background: #fff;
+  }
+
+  .awards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .awards-col h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ubc-gold);
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E2E8F0;
+  }
+
+  .award-item {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #F1F5F9;
+    align-items: start;
+  }
+
+  .award-item:last-child {
+    border-bottom: none;
+  }
+
+  .award-year {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--ubc-navy);
+    font-weight: 700;
+    padding-top: 2px;
+  }
+
+  .award-name {
+    font-size: 16px;
+    color: #334155;
+    line-height: 1.5;
+  }
+
+  .award-org {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: #94A3B8;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+
+  /* ─── TEACHING ─── */
+  .teaching-section {
+    background: var(--ubc-navy);
+    color: white;
+  }
+
+  .teaching-section .section-title { color: #fff; }
+  .teaching-section .section-number { color: var(--ubc-gold); }
+
+  .teaching-intro {
+    font-size: 20px;
+    color: #94A3B8;
+    max-width: 720px;
+    line-height: 1.8;
+    margin-bottom: 56px;
+  }
+
+  .courses-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .course-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    padding: 32px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .course-card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(201,162,39,0.3);
+  }
+
+  .course-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ubc-gold);
+    margin-bottom: 12px;
+  }
+
+  .course-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .course-card p {
+    font-size: 15px;
+    color: #64748B;
+    line-height: 1.7;
+  }
+
+  /* ─── WRITING ─── */
+  .writing-section {
+    background: var(--ubc-warm-grey);
+  }
+
+  .writing-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .writing-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+
+  .writing-card:hover {
+    border-color: var(--ubc-gold);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,33,69,0.1);
+  }
+
+  .writing-card-icon {
+    font-size: 32px;
+  }
+
+  .writing-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--ubc-navy);
+  }
+
+  .writing-card p {
+    font-size: 16px;
+    color: var(--ubc-slate);
+    line-height: 1.65;
+    flex: 1;
+  }
+
+  .writing-card .cta {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ubc-gold);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .writing-card .cta::after {
+    content: '→';
+    transition: transform 0.2s;
+  }
+
+  .writing-card:hover .cta::after {
+    transform: translateX(4px);
+  }
+
+  /* ─── BACKGROUND TIMELINE ─── */
+  .bio-section {
+    background: #fff;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px; bottom: 8px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--ubc-gold), var(--ubc-navy), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 44px;
+    padding-bottom: 44px;
+    border-bottom: 1px solid #F1F5F9;
+  }
+
+  .timeline-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -45px; top: 8px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--ubc-gold);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--ubc-gold);
+  }
+
+  .timeline-period {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--ubc-gold);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  .timeline-role {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--ubc-navy);
+    margin-bottom: 4px;
+  }
+
+  .timeline-org {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: #94A3B8;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+  }
+
+  .timeline-desc {
+    font-size: 16px;
+    color: var(--ubc-slate);
+    line-height: 1.7;
+    max-width: 640px;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--ubc-navy);
+    color: #4A5568;
+    padding: 60px 0 40px;
+    border-top: 3px solid var(--ubc-gold);
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .footer-brand p {
+    font-size: 15px;
+    color: #4A5568;
+    line-height: 1.7;
+    max-width: 300px;
+  }
+
+  .footer-col h4 {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ubc-gold);
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-col a {
+    color: #4A5568;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover { color: #94A3B8; }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-bottom p {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: #334155;
+  }
+
+  .ubc-note {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: #334155;
+    text-align: right;
+    line-height: 1.6;
+    max-width: 340px;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+  h1 { animation: fadeUp 0.6s 0.1s ease both; }
+  .hero-subtitle { animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-tags { animation: fadeUp 0.6s 0.3s ease both; }
+  .hero-affiliations { animation: fadeUp 0.6s 0.4s ease both; }
+  .hero-img-frame { animation: fadeUp 0.8s 0.3s ease both; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links { gap: 20px; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-text { padding: 120px 32px 60px; }
+    .hero-img-col { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-sidebar { position: static; }
+    .research-areas { grid-template-columns: 1fr; }
+    .awards-grid { grid-template-columns: 1fr; }
+    .courses-grid { grid-template-columns: 1fr; }
+    .writing-links { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+    .book-feature { grid-template-columns: 1fr; }
+    .book-spine { min-height: 140px; }
+    .container { padding: 0 24px; }
+    section { padding: 72px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><span>ZH</span> &nbsp;Zahra Hayat</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#background">Background</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Anthropologist · Lawyer · Harvard Academy Fellow</div>
+    <h1>Zahra<br><span class="hero-title-italic">Hayat</span></h1>
+    <p class="hero-subtitle">Studying pharmaceutical capitalism, intellectual property, and the politics of life-saving drugs in the Global South.</p>
+    <div class="hero-tags">
+      <span class="tag">Medical Anthropology</span>
+      <span class="tag">IP Law</span>
+      <span class="tag">Pakistan</span>
+      <span class="tag">Pharmaceutical Access</span>
+    </div>
+    <div class="hero-affiliations">
+      <div class="aff-item">Harvard Academy Postdoctoral Fellow, 2024–26</div>
+      <div class="aff-item">Assistant Professor, UBC Anthropology (on leave)</div>
+      <div class="aff-item">PhD, UC Berkeley · JD Oxford · LLM Yale</div>
+    </div>
+  </div>
+  <div class="hero-img-col">
+    <div class="on-leave-badge">On Leave · Until June 2026</div>
+    <div class="hero-img-frame">
+      <img src="https://anth.cms.arts.ubc.ca/wp-content/uploads/sites/30/2022/05/ZahraHayat-e1716330007246.png" alt="Zahra Hayat">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2 class="section-title">About</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I am an Assistant Professor of Anthropology at the University of British Columbia and a Harvard Academy Postdoctoral Fellow at the Harvard Academy for International and Area Studies (2024–26). I work at the intersection of medical anthropology and law, studying pharmaceutical capitalism, intellectual property, and narcotics control.</p>
+        <p>My work is driven by the reality of preventable death and suffering in the Global South. These stakes shape the arc of my career in both academia and legal advocacy — from representing asylum applicants, to advocating for healthcare for children in foster care, to highlighting the persecution of religious minorities in Pakistan under blasphemy laws.</p>
+        <p>I obtained my PhD in Anthropology from UC Berkeley in 2022. Before my doctoral program, I practiced law in the San Francisco Bay Area for five years — first as an advocate for children in foster care at the National Center for Youth Law, then as an intellectual property litigator at Morrison & Foerster. My first law degree, the BA in Jurisprudence, is from Oxford University, where I was a Rhodes Scholar. I also hold an LLM from Yale Law School.</p>
+      </div>
+      <div class="about-sidebar">
+        <div class="contact-card">
+          <h3>Contact & Affiliation</h3>
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <span class="contact-value"><a href="mailto:zahra.hayat@ubc.ca">zahra.hayat@ubc.ca</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">604 822 3575</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">UBC Office</span>
+            <span class="contact-value">Ponderosa Office Annex G, Room 9</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Current Status</span>
+            <span class="contact-value" style="color: var(--ubc-gold);">On Leave until June 2026<br><span style="color:#4A5568;font-size:14px;">Harvard Academy Fellow, Boston, MA</span></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Research Streams</span>
+            <span class="contact-value">Medical Anthropology<br>Socio-cultural Anthropology</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="research-section" id="research">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2 class="section-title">Research</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="book-feature">
+      <div class="book-spine">
+        <div class="book-spine-title">Scandal in a Spectral Place</div>
+        <div class="book-spine-sub">Book Manuscript · In Progress</div>
+      </div>
+      <div class="book-content">
+        <h3>Scandal in a Spectral Place: Pharmaceutical Capitalism in Pakistan</h3>
+        <p>Pakistan has some of the world's lowest drug prices — and almost no patents filed by Western multinationals. Yet it is burdened by severe shortages of life-saving drugs and a devastating epidemic of unpalliated cancer pain due to morphine scarcity.</p>
+        <p>This book unravels these paradoxes by rethinking the relationships between pharmaceutical access and price, property, and narcotics control. It draws on two years of ethnographic fieldwork in Lahore, Karachi, and Islamabad, and foregrounds the geopolitical entanglements of pharmaceutical political economies.</p>
+        <div class="prize-badge">🏆 S.S. Pirzada Prize — Best Dissertation on Pakistan, 2023</div>
+      </div>
+    </div>
+
+    <div class="research-areas">
+      <div class="research-card">
+        <h4>Pharmaceutical Capitalism</h4>
+        <p>How global pricing regimes, IP law, and narcotics control shape who lives and who dies across the Global South.</p>
+      </div>
+      <div class="research-card">
+        <h4>Intellectual Property & Law</h4>
+        <p>The role of IP frameworks — and their surprising absence — in pharmaceutical access in countries like Pakistan.</p>
+      </div>
+      <div class="research-card">
+        <h4>Regimes of Pain</h4>
+        <p>How militarized narcotics control and price ceilings make cheap, effective opioids like morphine scarce in hospitals while heroin proliferates illicitly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section class="teaching-section" id="teaching">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2 class="section-title">Teaching</h2>
+      <div class="section-rule" style="background: linear-gradient(90deg, #fff, transparent); opacity: 0.1;"></div>
+    </div>
+    <p class="teaching-intro">My courses foreground the deep — and under-explored — relationships between medical anthropology and law. I teach across genre: film, fiction, and legal decisions sit alongside ethnography in my syllabi.</p>
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-tag">ANTH — New Course</div>
+        <h4>The Capitalist Lives of Pharmaceuticals</h4>
+        <p>Examines how the calculi of Big Pharma condition pharmaceutical access globally, from patent cliffs to parallel trade to compulsory licensing.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-tag">ANTH — New Course</div>
+        <h4>Medical Anthropology and Law</h4>
+        <p>Trains a feminist legal lens on the fraught ethical terrains of abortion, genetics, clinical trials, and opioid addiction.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-tag">ANTH — Core</div>
+        <h4>South Asian Societies</h4>
+        <p>Introductory and advanced courses on South Asia — history, politics, religion, and contemporary issues including blasphemy law and healthcare.</p>
+      </div>
+      <div class="course-card">
+        <div class="course-tag">ANTH — Interdisciplinary</div>
+        <h4>IP, Technology & Justice</h4>
+        <p>As an inaugural member of the IP, Technology & Justice Research Group at UBC's Allard Law School, I bridge law and anthropology in classroom and research alike.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section class="awards-section" id="awards">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2 class="section-title">Awards & Fellowships</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="awards-grid">
+      <div class="awards-col">
+        <h3>External Fellowships & Awards</h3>
+        <div class="award-item">
+          <div class="award-year">2024–26</div>
+          <div>
+            <div class="award-name">Postdoctoral Fellowship</div>
+            <div class="award-org">Harvard Academy for International and Area Studies</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2023</div>
+          <div>
+            <div class="award-name">S.S. Pirzada Dissertation Prize in Pakistan Studies</div>
+            <div class="award-org">Best dissertation on Pakistan across North America & Europe</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2021–22</div>
+          <div>
+            <div class="award-name">Dissertation Completion Fellowship</div>
+            <div class="award-org">American Association of University Women (AAUW)</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2017–18</div>
+          <div>
+            <div class="award-name">Dissertation Fieldwork Grant</div>
+            <div class="award-org">Wenner-Gren Foundation</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2017–18</div>
+          <div>
+            <div class="award-name">International Dissertation Research Fellowship</div>
+            <div class="award-org">Social Sciences Research Council (SSRC IDRF)</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2003</div>
+          <div>
+            <div class="award-name">Rhodes Scholarship</div>
+            <div class="award-org">One of two scholars-elect from Pakistan · University of Oxford</div>
+          </div>
+        </div>
+      </div>
+      <div class="awards-col">
+        <h3>University Honors</h3>
+        <div class="award-item">
+          <div class="award-year">2024</div>
+          <div>
+            <div class="award-name">Outstanding Undergraduate Teaching Award</div>
+            <div class="award-org">UBC Anthropology Student Association</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2023</div>
+          <div>
+            <div class="award-name">Public Humanities Seed Grant</div>
+            <div class="award-org">Public Humanities Hub, UBC</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2013–17</div>
+          <div>
+            <div class="award-name">Berkeley Fellowship</div>
+            <div class="award-org">Four-year competitive graduate fellowship, UC Berkeley</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2008–10</div>
+          <div>
+            <div class="award-name">Arthur Liman Public Interest Fellowship</div>
+            <div class="award-org">Yale Law School</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2005</div>
+          <div>
+            <div class="award-name">Lovells Prize</div>
+            <div class="award-org">Lincoln College, Oxford — exceptional academic ability</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">1998–02</div>
+          <div>
+            <div class="award-name">Full Merit Scholarship</div>
+            <div class="award-org">Lahore University of Management Sciences</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section class="writing-section" id="writing">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <h2 class="section-title">Writing & Public Work</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="writing-links">
+      <a href="https://zahrahayat.com/research/" class="writing-card" target="_blank" rel="noopener">
+        <div class="writing-card-icon">📖</div>
+        <h3>Personal Website</h3>
+        <p>Academic research pages, publications, and talks — including her work on Sovaldi in Pakistan and the politics of palliative care.</p>
+        <span class="cta">Visit zahrahayat.com</span>
+      </a>
+      <a href="https://anth.ubc.ca/profile/zahra-hayat/" class="writing-card" target="_blank" rel="noopener">
+        <div class="writing-card-icon">🎓</div>
+        <h3>UBC Faculty Profile</h3>
+        <p>Official profile at the University of British Columbia Department of Anthropology, including courses, research streams, and contact information.</p>
+        <span class="cta">View UBC Profile</span>
+      </a>
+      <a href="https://sociology.uchicago.edu/events/zahra-hayat" class="writing-card" target="_blank" rel="noopener">
+        <div class="writing-card-icon">🎙️</div>
+        <h3>Featured Talk: Sovaldi in Pakistan</h3>
+        <p>A talk at the University of Chicago on how Gilead's $84,000 Hepatitis C drug reached Pakistan at $2 per pill — and what this reveals about IP and access.</p>
+        <span class="cta">Read More</span>
+      </a>
+      <a href="https://live-ssmatrix.pantheon.berkeley.edu/research-article/the-scandal-of-access-an-interview-with-zahra-hayat/" class="writing-card" target="_blank" rel="noopener">
+        <div class="writing-card-icon">🎧</div>
+        <h3>Matrix Podcast: The Scandal of Access</h3>
+        <p>An in-depth interview with UC Berkeley's Social Science Matrix on pharmaceutical access in Pakistan, pricing paradoxes, and the War on Drugs.</p>
+        <span class="cta">Listen & Read</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BACKGROUND TIMELINE -->
+<section class="bio-section" id="background">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <h2 class="section-title">Background</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-period">2024 – 2026</div>
+        <div class="timeline-role">Harvard Academy Postdoctoral Fellow</div>
+        <div class="timeline-org">Harvard Academy for International and Area Studies · Cambridge, MA</div>
+        <p class="timeline-desc">Completing the book manuscript <em>Scandal in a Spectral Place</em> and continuing research on pharmaceutical capitalism and global narcotics control.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">2022 – Present</div>
+        <div class="timeline-role">Assistant Professor of Anthropology</div>
+        <div class="timeline-org">University of British Columbia · Vancouver, BC</div>
+        <p class="timeline-desc">Teaching medical anthropology and law; inaugural member of the IP, Technology & Justice Research Group at UBC's Allard Law School.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">2013 – 2022</div>
+        <div class="timeline-role">PhD in Anthropology</div>
+        <div class="timeline-org">University of California, Berkeley</div>
+        <p class="timeline-desc">Dissertation: <em>The Scandal of Access</em> — two years of ethnographic fieldwork in Lahore, Karachi, and Islamabad. Winner of the Pirzada Prize.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">2011 – 2013</div>
+        <div class="timeline-role">IP Litigation Associate</div>
+        <div class="timeline-org">Morrison & Foerster LLP · Palo Alto, CA</div>
+        <p class="timeline-desc">Intellectual property litigation at an international law firm. Pro bono work including Iraqi Refugee Assistance Project and No-Fly List litigation.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">2008 – 2010</div>
+        <div class="timeline-role">Attorney & Yale Liman Fellow</div>
+        <div class="timeline-org">National Center for Youth Law · Oakland, CA</div>
+        <p class="timeline-desc">Advocated for improved mental health access for children in foster care.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">2008 – 2010</div>
+        <div class="timeline-role">LLM</div>
+        <div class="timeline-org">Yale Law School · New Haven, CT</div>
+        <p class="timeline-desc">Graduate legal studies with a focus on public interest law.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">2003 – 2007</div>
+        <div class="timeline-role">BA in Jurisprudence (Rhodes Scholar)</div>
+        <div class="timeline-org">University of Oxford, Lincoln College · Oxford, UK</div>
+        <p class="timeline-desc">One of two Rhodes Scholars from Pakistan. Won the Lovells Prize for exceptional academic ability and the Hanbury Scholarship.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Zahra Hayat</h3>
+        <p>Anthropologist. Lawyer. Harvard Academy Fellow. Working toward a world without preventable death.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#writing">Writing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://zahrahayat.com" target="_blank">zahrahayat.com</a></li>
+          <li><a href="https://anth.ubc.ca/profile/zahra-hayat/" target="_blank">UBC Profile</a></li>
+          <li><a href="mailto:zahra.hayat@ubc.ca">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Zahra Hayat. UBC Anthropology.</p>
+      <p class="ubc-note">We acknowledge that UBC Vancouver is situated on the traditional, ancestral, and unceded territory of the xʷməθkʷəy̓əm (Musqueam).</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
